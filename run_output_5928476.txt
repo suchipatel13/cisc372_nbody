@@ -1,0 +1,4 @@
+rm -f *.o nbody
+gcc -DDEBUG -c nbody.c
+nvcc -DDEBUG -c compute_cuda.cu
+nvcc -DDEBUG nbody.o compute_cuda.o -o nbody -lm
